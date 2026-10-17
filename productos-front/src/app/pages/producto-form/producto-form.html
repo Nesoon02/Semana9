@@ -1,0 +1,14 @@
+<h2>Producto</h2>
+<form [formGroup]="form" (ngSubmit)="guardar()">
+<label>Nombre</label>
+<input formControlName="nombre">
+@if (form.controls.nombre.touched && form.controls.nombre.invalid) {
+<small>Ingrese al menos 3 caracteres.</small>
+}
+<label>Precio</label>
+<input type="number" formControlName="precio">
+<label>Stock</label>
+<input type="number" formControlName="stock">
+<button type="submit">Guardar</button>
+<button type="button" routerLink="/productos">Volver</button>
+</form>
