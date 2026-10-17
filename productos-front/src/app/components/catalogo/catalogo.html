@@ -2,7 +2,7 @@
 <button type="button" routerLink="/productos/nuevo">Nuevo producto</button>
 <table>
 <thead>
-<tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+<tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Stock</th><th>Acciones</th><th>Buscar</th></tr>
 </thead>
 <tbody>
 @for (p of productos(); track p.id) {
@@ -12,6 +12,7 @@
 <td>S/ {{ p.precio }}</td>
 <td>{{ p.stock }}</td>
 <td><button [routerLink]="['/productos/editar', p.id]">Editar</button></td>
+<td><button [routerLink]="['/productos/hola']">Buscar</button></td>
 </tr>
 }
 </tbody>
